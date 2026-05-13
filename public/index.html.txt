@@ -1,0 +1,17 @@
+<!-- In a real website, this is a "product card" or a section within the main content -->
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+  <img src="https://i.imgur.com/a/dmvZV7d.jpg" class="w-full h-48 object-cover" alt="Cloudline Burger">
+  <div class="p-5">
+    <h2 class="text-2xl font-black">🔥 Cloudline's Signature Burger</h2>
+    <p class="text-gray-600 mt-2">Our 100% beef patty, perfectly grilled and topped with the freshest ingredients.</p>
+    <div class="flex flex-wrap gap-2 mt-3 text-sm">
+      <span class="bg-amber-50 px-2 py-1 rounded-full"><i class="fas fa-cheese"></i> Melted Cheese</span>
+      <span class="bg-amber-50 px-2 py-1 rounded-full"><i class="fas fa-leaf"></i> Crisp Lettuce</span>
+      <span class="bg-amber-50 px-2 py-1 rounded-full"><i class="fas fa-tomato"></i> Fresh Tomato</span>
+    </div>
+    <div class="mt-4 flex justify-between items-center">
+      <span class="text-2xl font-black text-orange-600">R35.00</span>
+      <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-xl transition">Order Now</button>
+    </div>
+  </div>
+</div>
