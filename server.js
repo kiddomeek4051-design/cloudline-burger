@@ -85,8 +85,8 @@ app.post('/api/orders', (req, res) => {
        // Send email confirmation to admin and customer
        const subject = `New Order #${this.lastID} from ${customerName}`;
        const text = `Order: ${productName} x${quantity} | Total R${totalPrice}\nRoom: ${roomNumber}\nDelivery: ${deliveryMethod}\nNote: ${specialMessage}\nScheduled: ${scheduledTime || 'ASAP'}`;
-       transporter.sendMail({ from: 'kiddomeek4051@gmail.com', to: 'kiddomeek4051@gmail.com', subject, text });
-       transporter.sendMail({ from: 'kiddomeek4051@gmail.com', to: 'kiddomeek4051@gmail.com', subject: `Order Confirmation for ${customerName}`, text: `Your order #${this.lastID} received. We'll notify you when ready.` });
+       transporter.sendMail({ from: 'onboarding@resend.dev', to: 'kiddomeek4051@gmail.com', subject, text });
+       transporter.sendMail({ from: 'onboarding@resend.dev', to: 'kiddomeek4051@gmail.com', subject: `Order Confirmation for ${customerName}`, text: `Your order #${this.lastID} received. We'll notify you when ready.` });
        res.json({ id: this.lastID, whatsappLink: sendWhatsAppMessage('2787208242', `New order: ${customerName} - ${productName} x${quantity}`) });
      });
 });
