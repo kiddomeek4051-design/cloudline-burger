@@ -35,9 +35,15 @@ db.serialize(() => {
 });
 
 // Email transporter (use your email)
+// Email transporter using Resend SMTP
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: { user: 'kiddomeek4051@gmail.com', pass: process.env.EMAIL_PASS || 'your_app_password' }
+  host: process.env.EMAIL_HOST,
+  port: process.env.EMAIL_PORT,
+  secure: process.env.EMAIL_SECURE === 'true',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  }
 });
 
 // WhatsApp helper
